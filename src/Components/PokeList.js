@@ -1,18 +1,20 @@
 import React from 'react';
-// import Pokemon from './Pokemon';
-
-
+import Pokemon from './Pokemon';
 
 class PokeList extends React.Component{
   render(){
-    console.log(this.props.data);
+    const { pokemon } = this.props;
     return(
       <div className="pokemon__card">
         <ul>
-          {this.props.data.map(item => {
+          {pokemon.map((item, id) => {
             return(
-            <li className="pokemon__name">
+            <li className="pokemon__name" key={id}>
+              <img src={item.url} alt={`Imagen de ${item.name}`}></img>
               <h2>{item.name}</h2>
+              <Pokemon 
+                pokemon={pokemon}
+              />
             </li>
            ); 
           })}

@@ -82,26 +82,31 @@ class App extends React.Component{
     return(
       <div className="page">
         <h1 className="title">Mi lista de pokemon</h1>
-        <PokeList 
-          data={pokemon}
-         
-        />
+        <div>
+          <PokeList 
+            pokemon={pokemon}
+          />
+          {/* <ul> {pokemon.map((item, id) => {
+            return(
+            <li className="pokemon__item" key={id}>
+              <div className="pokemon__card">
+                <img className="pokemon__img" src={item.url} alt={`Imagen de ${item.name}`}></img>
+                <h2 className="pokemon__name">{item.name}</h2>
+                <ul>{item.types.map(obj=> {
+                return(
+                  <li>{obj}</li>
+                );
+                })}
+                </ul>
+              </div>
+            </li>
+            );
+          })}
+          </ul> */}
+        </div>
       </div>
     );
   }
 }
 
 export default App;
-{/* 
-        <ul>
-          {pokemon.map((item, index) => {
-            return(
-              <li className="pokemon__item" key={index}>
-                <PokeList
-                name={item.name}
-                src={item.url}
-                />
-              </li>
-            );
-          })}
-        </ul> */}
