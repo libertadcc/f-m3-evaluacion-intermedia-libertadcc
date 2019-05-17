@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './scss/main.scss';
 import PokeList from './Components/PokeList';
 
 const pokemon = [
@@ -81,10 +81,9 @@ class App extends React.Component{
   render(){
     return(
       <div className="page">
-        <h1 className="title">Mi lista de pokemon</h1>
+        <h1 className="title">Mi lista de Pokémon</h1>
         <PokeList 
           data={pokemon}
-         
         />
       </div>
     );
