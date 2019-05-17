@@ -1,5 +1,5 @@
 import React from 'react';
-// import Pokemon from './Pokemon';
+import Pokemon from './Pokemon';
 
 
 
@@ -11,8 +11,9 @@ class PokeList extends React.Component{
         <ul>
           {this.props.data.map(item => {
             return(
-            <li className="pokemon__name">
-              <h2>{item.name}</h2>
+            <li key={item.id} className="pokemon__name">
+              <Pokemon 
+              item={item}/>
             </li>
            ); 
           })}

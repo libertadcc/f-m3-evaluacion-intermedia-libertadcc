@@ -92,16 +92,3 @@ class App extends React.Component{
 }
 
 export default App;
-{/* 
-        <ul>
-          {pokemon.map((item, index) => {
-            return(
-              <li className="pokemon__item" key={index}>
-                <PokeList
-                name={item.name}
-                src={item.url}
-                />
-              </li>
-            );
-          })}
-        </ul> */}
