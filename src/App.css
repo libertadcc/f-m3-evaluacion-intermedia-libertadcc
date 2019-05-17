@@ -1,7 +1,9 @@
 .page {
   text-align: center;
 }
-
+.pokemon__item, .pokemon__types{
+  list-style: none;
+}
 .pokemon__img{
   width: 100px;
   height: 100px;

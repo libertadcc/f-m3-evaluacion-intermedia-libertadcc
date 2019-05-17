@@ -80,31 +80,31 @@ const pokemon = [
 class App extends React.Component{
   render(){
     return(
-      <div className="page">
-        <h1 className="title">Mi lista de pokemon</h1>
-        <div>
-          <PokeList 
-            pokemon={pokemon}
-          />
-          {/* <ul> {pokemon.map((item, id) => {
-            return(
-            <li className="pokemon__item" key={id}>
-              <div className="pokemon__card">
-                <img className="pokemon__img" src={item.url} alt={`Imagen de ${item.name}`}></img>
-                <h2 className="pokemon__name">{item.name}</h2>
-                <ul>{item.types.map(obj=> {
-                return(
-                  <li>{obj}</li>
-                );
-                })}
-                </ul>
-              </div>
-            </li>
-            );
-          })}
-          </ul> */}
-        </div>
-      </div>
+    <div className="page">
+      <h1>Mi lista de pokémon</h1> 
+      <PokeList 
+        pokemon={pokemon}
+      />
+      {console.log(this.pokemon)}
+      {/* <ul className="pokemon__list">
+      {pokemon.map(item => {
+        return(
+        <li className="pokemon__item" key={item.id}>
+          <div className="pokemon__card">
+            <img className="pokemon__img" src={item.url} alt={`Imagen de ${item.name}`}></img>
+            <h2 className="pokemon__name">{item.name}</h2>
+            <ul>{item.types.map((obj, index)=> {
+              return(
+                <li key={index} className="pokemon__types">{obj}</li>
+              );
+            })}
+            </ul>
+          </div>
+        </li>
+        );
+      })}
+      </ul> */}
+    </div>
     );
   }
 }

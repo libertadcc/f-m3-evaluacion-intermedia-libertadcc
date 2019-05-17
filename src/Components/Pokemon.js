@@ -2,22 +2,16 @@ import React from 'react';
 
 class Pokemon extends React.Component{
   render(){
-    const { pokemon } = this.props;
+    const {item} = this.props;
     return(
-      <div>
-        <ul>
-        {pokemon.types.map((obj, id) => {
+      <ul>
+        {item.map(obj=>{
           return(
-          <li key={id}>
-            <span>{obj}</span>
-          </li>
-          );
+            <li>{obj.types}</li>
+          )
         })}
-        </ul>
-      </div>     
-    );
+      </ul>);
   }
 }
 
 export default Pokemon;
-
