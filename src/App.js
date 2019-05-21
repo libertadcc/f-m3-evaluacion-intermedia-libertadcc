@@ -2,7 +2,7 @@ import React from 'react';
 import './scss/main.scss';
 import PokeList from './Components/PokeList';
 import {poke} from './Components/Data';
-
+import PropTypes from 'prop-types';
 
 class App extends React.Component{
   constructor(props){
@@ -28,5 +28,10 @@ class App extends React.Component{
     );
   }
 }
+
+App.propTypes = {
+  pokemon: PropTypes.array,
+  poke: PropTypes.array
+};
 
 export default App;

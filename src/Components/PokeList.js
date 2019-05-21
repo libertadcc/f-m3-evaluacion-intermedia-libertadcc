@@ -1,7 +1,6 @@
 import React from 'react';
 import Pokemon from './Pokemon';
-
-
+import PropTypes from 'prop-types';
 
 class PokeList extends React.Component{
   render(){
@@ -22,6 +21,10 @@ class PokeList extends React.Component{
     );
   }
 }
+
+PokeList.propTypes = {
+  item: PropTypes.array
+};
 
 export default PokeList;
 
