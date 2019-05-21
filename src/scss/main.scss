@@ -47,6 +47,9 @@ body{
 }
 .pokemon__img{
   transform: scale(1.15);
+  &:hover{
+    transform: scale(2);
+  }
 }
 .pokemon__name{
   text-transform: capitalize;
